@@ -4,8 +4,8 @@ const app = express()
 
 app.use(express.json())
 
-const cadastro = require("./routes/cadastros.routes")
+const register = require("./routes/register.routes")
 
-app.use("/black-api", cadastro)
+app.use("/blackapi", register)
 
 module.exports = app
