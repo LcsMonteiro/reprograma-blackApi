@@ -6,6 +6,6 @@ app.use(express.json())
 
 const register = require("./routes/register.routes")
 
-app.use("/blackapi", register)
+app.use("/black-api", register)
 
 module.exports = app
