@@ -70,7 +70,7 @@ const deleteRegister = async (req, res) => {
     try {
         const register = await Register.findById(req.params.id)
         if (register == null) {
-            return res.status(400).json({message: "User not found"})
+            res.json({message: "User not found"})
         }
         await register.remove()
         res.status(204).json({message: "User deleted"})
