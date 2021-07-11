@@ -6,6 +6,10 @@ const enterpriseSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    enterprisePresentation: {
+        type: String,
+        required: true
+    },
     representativeName: {
         type: String,
         required: true

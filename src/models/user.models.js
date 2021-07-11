@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const registerSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     name: {
         type: String,
@@ -28,12 +28,12 @@ const registerSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    aboutMe: {
+    services: [{
         type: String,
         required: true
 
-    }
+    }]
 })
 
-module.exports = mongoose.model("register", registerSchema)
+module.exports = mongoose.model("user", userSchema)
 

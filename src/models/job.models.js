@@ -2,14 +2,6 @@ const mongoose = require("mongoose")
 
 const jobSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
-    enterpriseName: {
-        type: String,
-        required: true
-    },
-    enterprisePresentation: {
-        type: String,
-        required: true
-    },
     jobName: {
         type: String,
         required: true
@@ -40,9 +32,19 @@ const jobSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    benefits: {
+    benefits: [{
         type: String,
         required: true,
+    }],
+    enterprise: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref:"enterprise"
+    },
+    create: {
+        type: Date,
+        required: true,
+        default: new Date
     }
 })
 

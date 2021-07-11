@@ -7,6 +7,7 @@ const createEnterprise = async (req, res) => {
         _id: new mongoose.Types.ObjectId(),
         enterpriseName: req.body.enterpriseName,
         representativeName: req.body.representativeName,
+        enterprisePresentation: req.body.enterprisePresentation,
         cnpj: req.body.cnpj,
         email: req.body.email,
         enterprisePhone: req.body.enterprisePhone,

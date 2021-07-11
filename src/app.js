@@ -1,14 +1,15 @@
-const express = require("express")
+const express = require("express");
 
-const app = express()
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
 
-const register = require("./routes/register.routes")
-const enterprise = require("./routes/enterprise.routes")
+const user = require("./routes/user.routes");
+const enterprise = require("./routes/enterprise.routes");
+const job = require("./routes/job.routes");
 
-app.use("/register", register)
-app.use("/enterprise", enterprise)
+app.use("/users", user);
+app.use("/enterprise", enterprise);
+app.use("/jobs", job);
 
-
-module.exports = app
+module.exports = app;
