@@ -6,6 +6,7 @@ router.post("/create", controller.createUser);
 
 router.get("/list", controller.allUsers);
 
+
 router.patch("/update/:id", controller.replaceUser);
 
 router.delete("/delete/:id", controller.deleteUser);

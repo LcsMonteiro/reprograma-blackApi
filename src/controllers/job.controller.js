@@ -29,6 +29,24 @@ const listJob = async (req, res) => {
   return res.status(200).json(job);
 };
 
+
+const searchWorkplace = async (req, res) => {
+    let search;
+    search = req.params.workplace.toLowerCase();
+    const anyLikeQuery = { $regex: `.*${search}.*`, $options: "i" };
+
+    try {
+      const jobs = await Job.find({ workplace: anyLikeQuery }).exec();
+      if (jobs == undefined) {
+        return res.status(404).json({ message: "Nenhuma vaga encontrada." });
+      }
+      return res.status(200).json(jobs);
+    } catch (err) {
+      return res.status(500).json({ message: err.message });
+    }
+};
+
+
 const searchJob = async (req, res) => {
   const search = req.params.jobName.toLowerCase();
   const anyLikeQuery = { $regex: `.*${search}.*`, $options: "i" };
@@ -103,7 +121,9 @@ const deleteJob = async (req, res) => {
 module.exports = {
   createJob,
   listJob,
+  searchWorkplace,
   searchJob,
   replaceJob,
   deleteJob,
+  
 };
