@@ -1,6 +1,6 @@
 const app = require("./src/app")
 
-const port = process.env.PORT
+const port = process.env.PORT || 4010
 
 const db = require("./src/data/database")
 db.connect()

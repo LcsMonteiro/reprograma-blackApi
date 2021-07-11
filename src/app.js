@@ -8,7 +8,7 @@ const user = require("./routes/user.routes");
 const enterprise = require("./routes/enterprise.routes");
 const job = require("./routes/job.routes");
 
-app.use("/", (req, res) => console.log("teste app"));
+app.use("/", (req, res) => res.status(200).json({message: "Heroku funcionando"}));
 app.use("/users", user);
 app.use("/enterprise", enterprise);
 app.use("/jobs", job);
