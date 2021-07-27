@@ -1,5 +1,9 @@
 # reprograma-blackApi
 
+-[Heroku](https://reprograma-blackapi.herokuapp.com/)
+<br>
+-[GitHub](https://github.com/LcsMonteiro/reprograma-blackApi)
+
 Esta aplicação é uma API que fornece informações de profissionais pretos de diversas áreas, desde serviços, vendas, profissionais de saúde entre outras.
 Além de ser um facilitador para que pessoas pretas contratem serviços de outras pessoas pretas, a API terá informações sobre vagas de trabalho com recorte racial cadastradas pelas empresas parceiras.
 
