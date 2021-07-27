@@ -154,9 +154,9 @@ Além de ser um facilitador para que pessoas pretas contratem serviços de outra
 <br>
 
 ## Regras de negócio
- Não deverá ser possível criar usuários com o mesmo CPF;
- Não deverá ser possível criar empresas com o mesmo CNPJ;
- Para criar uma vaga, deverá vincular no momento da criação a uma empresa já existente no sistema.
+- Não deverá ser possível criar usuários com o mesmo CPF;
+- Não deverá ser possível criar empresas com o mesmo CNPJ;
+- Para criar uma vaga, deverá vincular no momento da criação a uma empresa já existente no sistema.
 <br>
 
 ### Dados para Collection Enterprise
