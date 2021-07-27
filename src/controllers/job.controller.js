@@ -17,7 +17,7 @@ const createJob = async (req, res) => {
     create: req.body.create,
   });
   try {
-    const newJob = await job.save();
+    const newJob = await job.save()
     res.status(201).json(newJob);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -25,7 +25,7 @@ const createJob = async (req, res) => {
 };
 
 const listJob = async (req, res) => {
-  const job = await Job.find();
+  const job = await Job.find().populate("enterprise");
   return res.status(200).json(job);
 };
 
@@ -34,11 +34,12 @@ const searchWorkplace = async (req, res) => {
     let search;
     search = req.params.workplace.toLowerCase();
     const anyLikeQuery = { $regex: `.*${search}.*`, $options: "i" };
-
+    
     try {
       const jobs = await Job.find({ workplace: anyLikeQuery }).exec();
+      
       if (jobs == undefined) {
-        return res.status(404).json({ message: "Nenhuma vaga encontrada." });
+        return res.status(404).json({ message: "Nenhuma cidade encontrada." });
       }
       return res.status(200).json(jobs);
     } catch (err) {

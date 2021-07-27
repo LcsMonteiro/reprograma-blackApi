@@ -6,7 +6,7 @@ router.post("/create", controller.createJob);
 
 router.get("/list", controller.listJob);
 router.get("/:jobName", controller.searchJob);
-router.get("/:workplace", controller.searchWorkplace)
+router.get("/workplace/:workplace", controller.searchWorkplace)
 
 router.patch("/update/:id", controller.replaceJob)
 

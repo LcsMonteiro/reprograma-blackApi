@@ -16,6 +16,8 @@ Além de ser um facilitador para que pessoas pretas contratem serviços de outra
 | `MongoDb` | Banco de dado não relacional orietado a documentos|
 | `MongoDb Compass` | Interface gráfica para verificar se os dados foram persistidos|
  `Insomnia ou Postman` | Interface gráfica para realizar os testes|
+|`Heroku`|plataforma nuvem que faz deploy com integração github|
+|`Mongo Atlas`|Serviço de banco de dados em nuvem
 <br>
 <br>
 
@@ -42,14 +44,17 @@ Além de ser um facilitador para que pessoas pretas contratem serviços de outra
    |    |- 📁 routes
    |         |- 📄 enterprise.routes.js 
    |         |- 📄 user.routes.js
-   |         |- 📄 job.models.js
+   |         |- 📄 job.routes.js
    | 
    |    |- app.js
    |
    |- 📄 .env
    |- 📄 .env.example
    |- 📄 .gitignore
-   |- 📄 package
+   |- 📄 package-lock.json
+   |- 📄 package.json
+   |- 📄 Procfile
+   |- 📄 README.md
    |- 📄 server.js
    ```
 <br>
@@ -122,7 +127,7 @@ Além de ser um facilitador para que pessoas pretas contratem serviços de outra
     searchJob retorna vagas com o nome solicitado.
     HTTP 200 OK
 
-    [GET]"/jobs/:workplace"
+    [GET]"/workplace/:workplace"
     searchWorkplace retorna vagas com a localidade solicitada.
      
 **POST**
